@@ -30,6 +30,20 @@ public class Timer : MonoBehaviour
                 print("Game Over");
                 IsCounting = false;
                 TimerTxt.text = string.Format("Game Over!");
+                DisablePlayerObjects();
+            }
+        }
+    }
+    void DisablePlayerObjects()
+    {
+        GameObject[] playerObjects = GameObject.FindGameObjectsWithTag("Player_Char");
+
+        foreach (GameObject playerObject in playerObjects)
+        {
+            MonoBehaviour[] scripts = playerObject.GetComponents<MonoBehaviour>();
+            foreach (MonoBehaviour script in scripts)
+            {
+                script.enabled = false;
             }
         }
     }

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class DoorOpening : MonoBehaviour
 {
-    private float openAngle = 45f;
+    private float openAngle = 90f;
     private float closedAngle = 0f;
     public RaycastHit hit;
     public float doorRange;
