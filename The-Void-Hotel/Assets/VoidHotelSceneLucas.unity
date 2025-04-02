@@ -400,7 +400,7 @@ MonoBehaviour:
   rotDir: {x: 0, y: 0, z: 0}
   camRot: {x: 0, y: 0, z: 0}
   moveSpeed: 5
-  rotSpeed: 30
+  rotSpeed: 200
   cam: {fileID: 1514398413}
   sprint: 0
   sprintSpeed: 0
@@ -429,7 +429,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!136 &901270889
 CapsuleCollider:
@@ -672,6 +672,7 @@ GameObject:
   - component: {fileID: 1514398416}
   - component: {fileID: 1514398415}
   - component: {fileID: 1514398414}
+  - component: {fileID: 1514398418}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -814,6 +815,19 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &1514398418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1514398412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd3efd5c6fbae5c47ad40cc5c5c532fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorRange: 10
 --- !u!1 &1804690141
 GameObject:
   m_ObjectHideFlags: 0
