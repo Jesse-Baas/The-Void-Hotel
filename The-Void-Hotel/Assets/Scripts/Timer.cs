@@ -47,4 +47,28 @@ public class Timer : MonoBehaviour
             }
         }
     }
+
+    public float GetTimer()
+    {
+        return timer;
+    }
+
+    // Method to set the timer value
+    public void SetTimer(float value)
+    {
+        timer = value;
+    }
+
+    // Method to check if the timer is running
+    public bool IsTimerRunning()
+    {
+        return IsCounting;
+    }
+
+    // Method to set whether the timer should be running
+    public void SetTimerRunning(bool value)
+    {
+        IsCounting = value;
+    }
 }
+
