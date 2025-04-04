@@ -89,4 +89,20 @@ public class InventoryManager : MonoBehaviour
             Debug.Log("No item selected to drop.");
         }
     }
+    public void LoadInventory(List<int> savedIndices)
+    {
+        inventory.Clear(); // Clear old inventory
+
+        GameObject[] allItems = GameObject.FindGameObjectsWithTag("Item");
+
+        foreach (int index in savedIndices)
+        {
+            if (index >= 0 && index < allItems.Length)
+            {
+                GameObject item = allItems[index];
+                inventory.Add(item);
+                item.SetActive(false); // Hide item since it's in inventory
+            }
+        }
+    }
 }

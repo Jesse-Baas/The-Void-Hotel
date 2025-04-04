@@ -7,6 +7,7 @@ TagManager:
   - Door
   - door
   - Player_Char
+  - Item
   layers:
   - Default
   - TransparentFX
